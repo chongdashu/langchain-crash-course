@@ -1,10 +1,14 @@
 import os
-from keys import openapi_key
+
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 
-os.environ["OPENAI_API_KEY"] = openapi_key
+if "OPENAI_API_KEY" not in os.environ:
+    from keys import openapi_key
+
+    os.environ["OPENAI_API_KEY"] = openapi_key
+
 llm = OpenAI(temperature=0.7)
 
 prompt_template_name = PromptTemplate(
