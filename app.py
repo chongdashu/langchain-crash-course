@@ -1,11 +1,5 @@
 import gradio as gr
-
-
-def generate_restaurant_name_and_items(cuisine: str) -> dict[str, str]:
-    return {
-        "restaurant_name": "Curry Delight",
-        "menu_items": "Butter Chicken, Naan, Paneer Tikka, Chole Bhature, Lassi, Gulab Jamun",
-    }
+from langchain_helper import generate_restaurant_name_and_items
 
 
 def update_outputs(cuisine: str) -> tuple[str, str]:
@@ -20,7 +14,7 @@ def update_outputs(cuisine: str) -> tuple[str, str]:
     return f"## {restaurant_name}", menu_items_formatted
 
 
-with gr.Blocks() as app:
+with gr.Blocks() as gradio_app:
     gr.Markdown("# Restaurant Name Generator")
     inp_cuisine = gr.Dropdown(
         ["Indian", "Italian", "Mexican", "Arabic"],
@@ -38,4 +32,4 @@ with gr.Blocks() as app:
 
 
 if __name__ == "__main__":
-    app.launch()
+    gradio_app.launch()
