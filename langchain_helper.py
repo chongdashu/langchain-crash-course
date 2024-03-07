@@ -1,6 +1,6 @@
 import os
 
-from langchain.llms import OpenAI
+from langchain_community.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 
@@ -22,11 +22,13 @@ name_chain = LLMChain(
 
 prompt_template_items = PromptTemplate(
     input_variables=["restaurant_name"],
-    template="Suggest some menu items for {restaurant_name}. Return it as a comma separated string.",
+    template="Suggest some menu items for {restaurant_name}. Return the menu items as a comma separated string with no additional preamble.",
 )
 
 food_items_chain = LLMChain(
-    llm=llm, prompt=prompt_template_items, output_key="menu_items"
+    llm=llm,
+    prompt=prompt_template_items,
+    output_key="menu_items",
 )
 
 chain = SequentialChain(
