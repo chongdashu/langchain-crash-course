@@ -22,7 +22,7 @@ name_chain = LLMChain(
 
 prompt_template_items = PromptTemplate(
     input_variables=["restaurant_name"],
-    template="Suggest some menu items for {restaurant_name}. Return the menu items as a comma separated string with no additional preamble.",
+    template="Suggest some menu items for {restaurant_name}. Return the menu items as a single, comma separated string with no additional preamble.",
 )
 
 food_items_chain = LLMChain(
@@ -39,7 +39,10 @@ chain = SequentialChain(
 
 
 def generate_restaurant_name_and_items(cuisine: str) -> dict[str, str]:
-    return chain({"cuisine": cuisine})
+    result = chain({"cuisine": cuisine})
+    print(result)
+    return result
+
     # return {
     #     "restaurant_name": "Curry Delight",
     #     "menu_items": "Butter Chicken, Naan, Paneer Tikka, Chole Bhature, Lassi, Gulab Jamun",
