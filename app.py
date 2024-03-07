@@ -18,13 +18,13 @@ with gr.Blocks() as gradio_app:
     gr.Markdown("## Restaurant Name Generator")
 
     with gr.Row():
-        with gr.Column() as left:
+        with gr.Column(scale=1) as left:
             inp_cuisine = gr.Dropdown(
                 ["Indian", "Italian", "Mexican", "Arabic"],
                 label="Pick a cuisine",
             )
 
-        with gr.Column(variant="panel") as right:
+        with gr.Column(variant="panel", scale=4) as right:
             out_restaurant_name = gr.Markdown()
             out_menu_items = gr.Markdown()
 
