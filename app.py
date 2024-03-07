@@ -20,7 +20,7 @@ with gr.Blocks() as gradio_app:
     with gr.Row():
         with gr.Column(scale=1) as left:
             inp_cuisine = gr.Dropdown(
-                ["Arabic", "French", "Indian", "Italian", "Mexican", "Singaporean"],
+                ["Arabic", "French", "Indian", "Italian", "Mexican"],
                 label="Pick a cuisine",
             )
 
