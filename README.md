@@ -23,5 +23,9 @@ conda use codebasics-langchain-crash-course
 
 # In (codebasics-langchain-crash-course)
 
+# Acknowledgements
+The code is based on original tutorial series by [@codebasics](https://twitter.com/codebasicshub).
+ * [LangChain Crash Course For Beginners](https://www.youtube.com/watch?v=nAmC7SoVLd8&list=PLeo1K3hjS3uu0N_0W6giDXzZIcB07Ng_F&ab_channel=codebasics)
+
 
 ```
