@@ -12,9 +12,8 @@ license: mit
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
 
-```
-
 # Introduction
+
 This repository contains the code for generating a restaurant name and menu items based on an input cuisine.
 It makes use of [LangChain](http://www.langchain.com) and OpenAI's chatGPT API, along with [Gradio](http://gradio.app) to serve an application.
 
@@ -23,10 +22,9 @@ The original [LangChain Crash Course For Beginners tutorial](https://www.youtube
 The code here uses updated libraries and Gradio in place of Streamlit.
 
 # Demo
+
 You can play around with the demo app on [this Hugging Face Space](https://huggingface.co/spaces/chongdashu/langchain-crash-course-gradio)
 
-
 # Acknowledgements
-The code is based on original tutorial series by [@codebasics](https://twitter.com/codebasicshub).
 
-```
+The code is based on original tutorial series by [@codebasics](https://twitter.com/codebasicshub).
