@@ -1,6 +1,6 @@
 ---
-title: Langchain Crash Course Gradio
-emoji: 🔥
+title: Langchain Crash Course (Gradio)
+emoji: 🔗
 colorFrom: yellow
 colorTo: indigo
 sdk: gradio
