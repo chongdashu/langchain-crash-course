@@ -12,6 +12,8 @@ license: mit
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
 
+![langchain crash course with gradio](langchain-crash-course-gradio.png)
+
 # Introduction
 
 This repository contains the code for generating a restaurant name and menu items based on an input cuisine.
